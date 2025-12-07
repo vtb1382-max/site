@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film,Serial</title>
+    
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #e0f7fa, #b2ebf2); /* Light blue gradient background */
+        color: #333; /* Dark text color */
+    }
+
+    #gallery {
+        margin: 2em;
+    }
+
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Increased gap between images */
+        justify-content: center; /* Center the images */
+    }
+
+    .image {
+        width: 225px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        background: #fff; /* White background for images */
+        padding: 10px;
+    }
+
+    .image:hover {
+        transform: scale(1.1);
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+        display: block;
+        border-radius: 10px;
+        object-fit: cover;
+        margin: 10px;
+    }
+
+    .next-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #80deea; /* Light blue button */
+        color: white;
+        text-decoration: none;
+        border-radius: 25px; /* Rounded button */
+        font-size: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .next-button:hover {
+        background-color: #4dd0e1; /* Darker light blue on hover */
+    }
+    </style>
+</head>
+
+<body>
+
+    <section id="gallery">
+        <div class="image-container">
+            <a href="Annabelle1.html" class="image">
+                <img src="Annabelle.jpg" alt="Annabelle">
+            </a>
+            <a href="Conjuring1.html" class="image">
+                <img src="Conjuring.jpg" alt="Conjuring">
+            </a>
+            <a href="Harry1.html" class="image">
+                <img src="Harry Potter.jpg" alt="Harry Potter">
+            </a>
+            <a href="Hunger Games1.html" class="image">
+                <img src="Hunger game.jpg" alt="Hunger game">
+            </a>
+            <a href="Squid Game.html" class="image">
+                <img src="Squid game.jpg" alt="Squid game">
+            </a>
+            <a href="The Last of Us.html" class="image">
+                <img src="Last of us.jpg" alt="Last of us">
+            </a>
+            <!-- Add more images with appropriate categories -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imageContainer = document.querySelector('.image-container');
+
+            // Add more images dynamically if needed
+            // Example:
+            // const newImage = document.createElement('div');
+            // newImage.className = 'image';
+            // newImage.innerHTML = '<img src="new-image.jpg" alt="New Image">';
+            // imageContainer.appendChild(newImage);
+        });
+    </script>
+     <a href="SafhayeAsli.html" class="next-button">صفحه ی اصلی</a>
+</body>
+
+</html>

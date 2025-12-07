@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annabelle3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #0d1117;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: auto; /* تغییر از overflow: hidden به overflow: auto */
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            display: flex;
+            background-color: #161b22;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            max-width: 800px;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        .image-section {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+        }
+        .image-section img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .info-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #161b22;
+            color: #fff;
+            border-radius: 0 15px 15px 0;
+        }
+        .info-section h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .info-section p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .info-section button {
+            background-color: #238636;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 700;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .info-section button:hover {
+            background-color: #2ea043;
+        }
+        .info-section .icon {
+            margin-right: 10px;
+        }
+        .next-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: #238636;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .next-button:hover {
+            background-color: #2ea043;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="Annabelle3.jpg" alt="پوستر فیلم">
+            <a href="Film,Serial.html" class="next-button">صفحه ی فیلم و سریال</a>
+        </div>
+        <div class="info-section">
+            <h1>دانلود فیلم Annabelle 2014</h1>
+            <p><i class="fas fa-film icon"></i><strong>کارگردان:</strong> gary dauberman</p>
+            <p><i class="fas fa-users icon"></i><strong>بازیگران:</strong> vera farmiga,patrick wilson,mckenna grace</p>
+            <p><i class="fas fa-tag icon"></i><strong>دسته‌بندی:</strong> ترسناک , رازآلود , هیجان انگیز</p>
+            <p><i class="fas fa-tag icon"></i><strong>داستان:</strong>میا و جان یک زوج جوان هستند که بزودی صاحب فرزندی خواهند شد. اما زمانی که جان برای میا یک عروسک قدیمی می خرد و به او هدیه می دهد، اتفاقات ناگواری برای این زوج رخ می دهد که…</p>
+            <button onclick="downloadMovie('720')" oncontextmenu="copyLink(event)">دانلود با کیفیت 720p</button>
+        </div>
+    </div>
+
+    <script>
+        function downloadMovie(quality) {
+            // Replace this with the actual download link
+            const downloadLink = `https://dl5.onlinedigi.top/www2/film/Collaction/The.Conjuring/Annabelle.2014.1080p.BluRay.SoftSub.DigiMoviez.mkv?md5=GeJAGm_xCqw_HXwVEdHaVQ&expires=1729351600`;
+            window.location.href = downloadLink;
+        }
+
+        function copyLink(event) {
+            event.preventDefault(); // Prevent the default context menu from appearing
+            const downloadLink = event.target.getAttribute('onclick').match(/'([^']+)'/)[1];
+            navigator.clipboard.writeText(downloadLink).then(() => {
+                alert('لینک دانلود کپی شد!');
+            });
+        }
+    </script>
+</body>
+</html>
