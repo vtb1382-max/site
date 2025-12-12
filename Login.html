@@ -15,23 +15,63 @@
         <div class="header">
             <p>Log In</p>
         </div>
+
         <div class="input-box">
             <label for="email">E-Mail</label>
             <input type="email" class="input-field" id="email" required>
             <i class="bx bx-envelope"></i>
         </div>
+
         <div class="input-box">
             <label for="pass">Password</label>
             <input type="password" class="input-field" id="pass" required>
             <i class="bx bx-lock"></i>
         </div>
-        <form action="enteghal.html" method="GET">
-    <div class="input-box">
-        <input type="submit" class="input-submit" value="Login">
-    </div>
-</form>
+
+        <form id="loginForm">
+            <div class="input-box">
+                <input type="submit" class="input-submit" value="Login">
+            </div>
+        </form>
+
        </div>
        <div class="wrapper"></div>
     </div>
+
+<script>
+    const correctEmail = "vtb1382@gmail.com";
+    const correctPass  = "09198062774";
+
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+
+        e.preventDefault(); // جلوگیری از رفتن فوری به صفحه بعد
+
+        const email = document.getElementById("email").value.trim();
+        const pass  = document.getElementById("pass").value.trim();
+
+        // چک خالی بودن فیلدها
+        if(email === "" || pass === ""){
+            alert("لطفاً هر دو فیلد را پر کنید.");
+            return;
+        }
+
+        // چک ایمیل
+        if(email !== correctEmail){
+            alert("ایمیل اشتباه است.");
+            return;
+        }
+
+        // چک رمز
+        if(pass !== correctPass){
+            alert("رمز اشتباه است.");
+            return;
+        }
+
+        // اگر همه چیز درست بود:
+        alert("با موفقیت وارد شدید!");
+        window.location.href = "enteghal.html"; 
+    });
+</script>
+
 </body>
 </html>
