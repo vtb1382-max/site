@@ -15,25 +15,65 @@
         <div class="header">
             <p>Sing In</p>
         </div>
+
 		   <div class="input-box">
                 <label for="name">Full Name</label>
                 <input type="text" class="input-field" id="name" required>
                 <i class="bx bx-user"></i>
             </div>
+
         <div class="input-box">
             <label for="email">E-Mail</label>
             <input type="email" class="input-field" id="email" required>
             <i class="bx bx-envelope"></i>
         </div>
 		   
-    <form action="Login.html" method="GET">
-    <div class="input-box">
-        <input type="submit" class="input-submit" value="Sabt">
-    </div>
-</form>
+    <!-- فقط این خط اضافه شد: id="loginForm" -->
+    <form id="loginForm" action="Login.html" method="GET">
+        <div class="input-box">
+            <input type="submit" class="input-submit" value="Sabt">
+        </div>
+    </form>
+
        </div>
        <div class="wrapper"></div>
     </div>
-</body>
 
+<!-- *** فقط این اسکریپت اضافه شد *** -->
+<script>
+    const correctName = "vanooshe";
+    const correctPass = "vtb1382";
+
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+        const name = document.getElementById("name").value.trim();
+        const pass = document.getElementById("email").value.trim();
+
+        // چک خالی بودن فیلدها
+        if(name === "" || pass === ""){
+            alert("لطفاً همه فیلدها را پر کنید.");
+            e.preventDefault();
+            return;
+        }
+
+        // چک نام
+        if(name !== correctName){
+            alert("نام کاربری اشتباه است.");
+            e.preventDefault();
+            return;
+        }
+
+        // چک رمز
+        if(pass !== correctPass){
+            alert("رمز اشتباه است.");
+            e.preventDefault();
+            return;
+        }
+
+        // موفقیت
+        alert("با موفقیت وارد شدید!");
+    });
+</script>
+<!-- *** پایان بخش اضافه شده *** -->
+
+</body>
 </html>
